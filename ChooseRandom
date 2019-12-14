@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int ChooseRandom(int);
+int main()
+{
+    int size,array[20],i;
+
+    printf("Choose the size of array:\n");
+    scanf("%d",&size);
+
+    for(i=1;i<=size;i++)
+    {
+         printf("\n%d - ",i);
+         scanf("%d",&i);
+    }
+
+    printf("Random elements is =%d\n",ChooseRandom(array[20]));
+    return 0;
+}
+
+int ChooseRandom(int a)
+{
+   srand((unsigned)time(NULL));
+   return rand()%a;
+
+}
