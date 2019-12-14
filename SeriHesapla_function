@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int SeriHesapla(int,int);
+int factoriel(int);
+
+int main()
+{
+    int a,b;
+    printf("a : ");
+    scanf("%d",&a);
+    printf("b : ");
+    scanf("%d",&b);
+    printf("\nToplam sonuc = %d\n",SeriHesapla(a,b));
+    return 0;
+}
+
+int SeriHesapla(int a,int b)
+{
+    int toplam=0,i;
+
+    for(i=0;i<b;i++)
+    {
+        toplam+=factoriel((i*a));
+        printf("%d+ ",factoriel((i*a)));
+    }
+    return toplam;
+
+
+}
+
+int factoriel(int y)
+{
+    if(y==0)
+    {
+        return 1;
+    }
+    else
+    {
+        int s=1,i;
+
+        for(i=1;i<=y;i++)
+        {
+            s*=i;
+
+        }
+        return s;
+    }
+
+
+}
